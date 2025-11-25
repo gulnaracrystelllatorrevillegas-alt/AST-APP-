@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Respira Contigo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Quicksand', 'sans-serif'],
+            },
+            colors: {
+              // Mist: Neutral Blue/Grays (Replaces Warm/Browns) - For Backgrounds & Text
+              mist: {
+                50: '#f0f9ff', // Alice Blue (Background)
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#334155', // Slate 700ish (Secondary Text)
+                900: '#0f172a', // Slate 900 (Main Text)
+              },
+              // Sky: Bright Celeste (Replaces Calm) - For Primary Actions / Inhale
+              sky: {
+                50: '#ecfeff',
+                100: '#cffafe',
+                200: '#a5f3fc',
+                300: '#67e8f9', // Bright Celeste
+                400: '#22d3ee',
+                500: '#06b6d4', // Primary Button
+                600: '#0891b2',
+                700: '#0e7490',
+                800: '#155e75',
+                900: '#164e63',
+              },
+              // Ocean: Deep Peaceful Blue (Replaces Serene) - For Exhale / Emphasis
+              ocean: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#3b82f6', // True Blue
+                600: '#2563eb',
+                700: '#1d4ed8', // Exhale bg
+                800: '#1e40af',
+                900: '#1e3a8a', // Deepest Navy
+              }
+            },
+            animation: {
+              'blob': 'blob 10s infinite alternate',
+              'breathe-in': 'breatheIn 4s ease-in-out forwards',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -30px) scale(1.05)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Quicksand', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: #f0f9ff; /* mist-50 */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

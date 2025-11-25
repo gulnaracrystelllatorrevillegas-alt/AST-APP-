@@ -1,0 +1,5 @@
+{
+  "name": "Respira Conmigo",
+  "description": "Una aplicación de asistencia emocional que utiliza IA para recomendar técnicas de respiración personalizadas en momentos de ansiedad o estrés.",
+  "requestFramePermissions": []
+}
